@@ -12,7 +12,7 @@ namespace Il2CppDumper
 
         static void Main(string[] args)
         {
-            config = JsonSerializer.Deserialize<Config>(File.ReadAllText(AppDomain.CurrentDomain.BaseDirectory + "config.json"));
+            config = JsonSerializer.Deserialize<Config>(File.ReadAllText(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "config.json")));
             string il2cppPath = null;
             string metadataPath = null;
             string outputDir = null;
